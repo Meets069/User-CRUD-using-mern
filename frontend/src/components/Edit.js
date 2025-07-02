@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import './Edit.css';
+import './Form.css';
 
 
 function Edit({user,cancelEdit,onSave})
