@@ -100,8 +100,8 @@ function Edit({user,cancelEdit,onSave})
             <div className="modal-content">
 
             <form onSubmit={handleSubmit}>
-                <div>
-                Username : &nbsp; &nbsp; &nbsp; 
+                <div className='form-field'>
+                <label>Username : </label>
                 <input
                 name="username"
                 placeholder="Enter Username"
@@ -111,11 +111,11 @@ function Edit({user,cancelEdit,onSave})
                 required
                 />
                 </div>
-                
-                <br/> <br/>
+                <div className='form-error'> {errors.username} </div>
+                <br/> 
 
-                <div>
-                Email : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
+                <div className='form-field'>
+                <label>Email : </label>
                 <input
                 name="email"
                 placeholder="Enter Email"
@@ -125,11 +125,11 @@ function Edit({user,cancelEdit,onSave})
                 required
                 />
                 </div>
-                <div style={{color:'red'}}> {errors.email} </div>
-                <br/> <br/>
+                <div className='form-error'> {errors.email} </div>
+                <br/> 
 
-                <div>
-                DOB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+                <div className='form-field'>
+                <label>DOB : </label>
                 <input
                 type="date"
                 name="dob"
@@ -140,8 +140,8 @@ function Edit({user,cancelEdit,onSave})
                 required
                 />
                 </div>
-                <div style={{color:'red'}}> {errors.dob} </div>
-                <br/> <br/>
+                <div className='form-error'> {errors.dob} </div>
+                <br/> 
 
                 <button type="submit"> Add</button>
 
